@@ -1,0 +1,62 @@
+@use 'variables' as var;
+
+.App {
+	display: flex;
+	flex-direction: column;
+
+	&__Header {
+		height: 11rem;
+		background-color: var.$desaturated-dark-cyan;
+		background-image: url('./assets/images/bg-header-mobile.svg');
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+	}
+
+	&__Main {
+		height: 100vh;
+		background-color: var.$light-grayish-cyan;
+	}
+}
+
+.Job__List {
+	position: relative;
+	display: grid;
+	place-items: center center;
+	margin-block: 3rem;
+}
+
+.Job {
+	display: grid;
+	font-size: var.$font-size;
+	border: none;
+	border-left: 8px solid var.$desaturated-dark-cyan;
+	border-radius: 10px;
+	background-color: var.$light-grayish;
+	box-shadow: 0 1rem 1rem -2rem;
+	padding: 2rem;
+}
+
+img {
+	position: absolute;
+	top: -1.5rem;
+	width: 3rem;
+}
+
+.Company__Name {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.Criteria {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.Tags {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+}
