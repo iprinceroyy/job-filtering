@@ -13,8 +13,8 @@ function App() {
 						</div>
 						<div className='Job__Description'>
 							<div className='Company__Name'>
-								<p>insure</p>
-								<p>new</p>
+								<p>Photosnap</p>
+								<p>new!</p>
 								<p>featured</p>
 							</div>
 							<p className='Position'>Senior Frontend Developer</p>

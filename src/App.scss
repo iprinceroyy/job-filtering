@@ -34,6 +34,12 @@
 	background-color: var.$light-grayish;
 	box-shadow: 0 1rem 1rem -2rem;
 	padding: 2rem;
+
+	&__Description {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+	}
 }
 
 img {
@@ -41,17 +47,45 @@ img {
 	top: -1.5rem;
 	width: 3rem;
 }
+hr {
+	border: none;
+	border-top: 1.2px solid rgba(var.$dark-grayish-cyan, 0.3);
+}
 
 .Company__Name {
 	display: flex;
-	justify-content: space-between;
+	gap: 1.5rem;
 	align-items: center;
+
+	& p:first-child {
+		color: var.$desaturated-dark-cyan;
+	}
+
+	& p:not(:first-child) {
+		background-color: var.$desaturated-dark-cyan;
+		color: white;
+		font-size: 0.7rem;
+		text-transform: uppercase;
+		padding-block: 0.3rem 0.2rem;
+		padding-inline: 0.5rem;
+		border-radius: 40px;
+		margin-inline-end: -1rem;
+	}
+
+	& p:last-child {
+		background-color: var.$black;
+	}
 }
 
 .Criteria {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	font-size: 0.8rem;
+	color: var.$dark-grayish-cyan;
+	& p {
+		border-left: 5px dotted;
+	}
 }
 
 .Tags {
