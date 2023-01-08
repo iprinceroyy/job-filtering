@@ -1,15 +1,15 @@
 import { useContext } from 'react';
 
-import { CompaniesContext } from '../../contexts/productContext';
 import Job from './JobComponent';
+import { CompaniesContext } from '../contexts/companyContext';
 
 const JobList = () => {
 	const { companies } = useContext(CompaniesContext);
 
 	return (
 		<div className='Job__List'>
-			{companies.map(company => (
-				<Job></Job>
+			{companies.map(({ id, ...companyData }) => (
+				<Job key={id} companyData={companyData}></Job>
 			))}
 		</div>
 	);

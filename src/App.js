@@ -1,5 +1,5 @@
 import './App.scss';
-import JobList from './assets/components/JobListComponent';
+import JobList from './components/JobListComponent';
 
 function App() {
 	return (

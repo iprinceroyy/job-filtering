@@ -4,7 +4,7 @@ import './index.scss';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-import { CompaniesProvider } from './contexts/productContext';
+import { CompaniesProvider } from './contexts/companyContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
