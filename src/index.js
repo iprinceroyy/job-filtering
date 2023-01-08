@@ -4,10 +4,14 @@ import './index.scss';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import { CompaniesProvider } from './contexts/productContext';
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 	<React.StrictMode>
-		<App />
+		<CompaniesProvider>
+			<App />
+		</CompaniesProvider>
 	</React.StrictMode>
 );
 
