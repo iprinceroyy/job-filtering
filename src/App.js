@@ -23,12 +23,13 @@ function App() {
 								<p>Full Time</p>
 								<p>USA Only</p>
 							</div>
-							<hr />
-							<div className='Tags'>
-								<p>css</p>
-								<p>react</p>
-								<p>html</p>
-							</div>
+						</div>
+						<div className='Tags'>
+							<p>css</p>
+							<p>react</p>
+							<p>html</p>
+							<p>Frontend</p>
+							<p>Senior</p>
 						</div>
 					</div>
 				</div>
