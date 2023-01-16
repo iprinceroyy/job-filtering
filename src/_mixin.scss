@@ -1,0 +1,31 @@
+@mixin display-flex($direction: row, $gap: 0, $align: '', $wrap: nowrap) {
+	display: flex;
+
+	@if $wrap != nowrap {
+		flex-wrap: wrap;
+	}
+
+	@if $direction != row {
+		flex-direction: column;
+	}
+
+	@if $gap != 0 {
+		gap: $gap;
+	}
+
+	@if $align != '' {
+		align-items: center;
+	}
+}
+
+@mixin display-grid($gap: 0, $align: '', $justify: '') {
+	display: grid;
+
+	@if $gap != 0 {
+		gap: 3rem;
+	}
+
+	@if $align != '' and $justify != '' {
+		place-items: $align $justify;
+	}
+}
