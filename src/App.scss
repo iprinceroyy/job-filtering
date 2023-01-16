@@ -38,7 +38,7 @@
 	border-left: 8px solid var.$desaturated-dark-cyan;
 	border-radius: 8px;
 	background-color: white;
-	box-shadow: 0 1rem 1rem -2rem;
+	box-shadow: 0 1rem 2rem -2rem var.$desaturated-dark-cyan;
 	padding: 2rem;
 
 	@media (min-width: 45rem) {
