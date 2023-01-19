@@ -28,9 +28,9 @@
 }
 
 .Job {
+	@include m.display-grid();
 	position: relative;
 	width: 80%;
-	@include m.display-grid();
 	font-size: var.$font-size;
 	border: none;
 	border-left: 8px solid var.$desaturated-dark-cyan;
@@ -133,5 +133,13 @@ hr {
 		padding-inline: 0.5rem;
 		border-radius: 3px;
 		background-color: var.$light-grayish-cyan;
+	}
+}
+
+/*  Animations  */
+.Job {
+	transition: all 0.9s ease-in-out;
+	&:hover {
+		scale: 1.06;
 	}
 }
