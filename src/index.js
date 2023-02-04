@@ -5,12 +5,16 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 import { CompaniesProvider } from './contexts/companyContext';
+import { TagsProvider } from './contexts/tagsContext';
+import Tags from './components/TagsComponent';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 	<React.StrictMode>
 		<CompaniesProvider>
-			<App />
+			<TagsProvider>
+				<App />
+			</TagsProvider>
 		</CompaniesProvider>
 	</React.StrictMode>
 );

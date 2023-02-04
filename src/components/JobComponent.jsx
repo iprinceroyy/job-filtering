@@ -32,7 +32,6 @@ const Job = ({ companyData }) => {
 		languages,
 		tools,
 	} = companyData;
-	console.log(logo);
 
 	return (
 		<div className='Job'>
