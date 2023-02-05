@@ -1,16 +1,37 @@
 import crossIcon from '../assets/images/icon-remove.svg';
+import { useContext } from 'react';
+import { TagsContext } from '../contexts/tagsContext';
 
-const SearchTags = ({ tags }) => {
+const SearchTags = ({ tagsList }) => {
+	const { tags, setUpdateTags } = useContext(TagsContext);
+
+	const handleClear = () => {
+		setUpdateTags([]);
+	};
+
+	const handleCross = e => {
+		setUpdateTags(prevState =>
+			prevState.filter(
+				prev => prev !== e.target.closest('.List--Tags').querySelector('p').innerText
+			)
+		);
+	};
+
 	return (
-		<div className='Header Search__Tags'>
-			{tags.map(tag => (
-				<div>
-					<div>
-						<img src={crossIcon}></img>
+		<div className='Search Search__Tags'>
+			<div className='List Search--List'>
+				{tagsList.map((tag, i) => (
+					<div className='List--Tags' key={`${i}`}>
+						<p>{tag}</p>
+						<div onClick={handleCross}>
+							<img src={crossIcon}></img>
+						</div>
 					</div>
-					<p>{tag}</p>
-				</div>
-			))}
+				))}
+			</div>
+			<div>
+				<p onClick={handleClear}>clear</p>
+			</div>
 		</div>
 	);
 };

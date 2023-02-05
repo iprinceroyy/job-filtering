@@ -91,8 +91,8 @@ hr {
 		color: var.$desaturated-dark-cyan;
 	}
 
-	.Company--new,
-	.Company--featured {
+	&--new,
+	&--featured {
 		background-color: var.$desaturated-dark-cyan;
 		color: white;
 		font-size: 0.7rem;
@@ -129,12 +129,21 @@ hr {
 	}
 
 	& p {
+		display: flex;
+		align-items: center;
 		color: var.$desaturated-dark-cyan;
 		font-weight: var.$fw-700;
 		padding-block: 0.3rem 0.2rem;
 		padding-inline: 0.5rem;
 		border-radius: 3px;
 		background-color: var.$light-grayish-cyan;
+
+		&:hover,
+		&:active {
+			background-color: var.$desaturated-dark-cyan;
+			color: white;
+			cursor: pointer;
+		}
 	}
 }
 
@@ -149,8 +158,9 @@ hr {
 .Search__Tags {
 	background-color: white;
 	display: flex;
+	justify-content: space-between;
+	align-items: center;
 	width: 80%;
-	gap: 2rem;
 	justify-self: center;
 	padding-inline: 1rem;
 	padding-block: 0.9rem;
@@ -162,24 +172,43 @@ hr {
 		width: 0.8rem;
 	}
 
-	> div {
+	.Search--List {
+		display: flex;
+		flex-wrap: wrap;
+
+		gap: 2rem;
+
+		& + div p {
+			color: var.$desaturated-dark-cyan;
+
+			&:hover {
+				border-bottom: 2px solid var.$desaturated-dark-cyan;
+			}
+		}
+	}
+
+	.List--Tags {
 		display: grid;
 		grid-template-columns: 1fr auto;
 		align-items: center;
 		align-content: center;
 		background-color: var.$light-grayish-cyan;
 
-		> div {
-			background-color: var.$desaturated-dark-cyan;
-			padding-block: 0.3rem;
-			padding-inline: 0.4rem;
+		p {
+			color: var.$desaturated-dark-cyan;
+			font-weight: var.$fw-700;
+			padding-block: 0.3rem 0.2rem;
+			padding-inline: 0.5rem;
 		}
-	}
 
-	p {
-		color: var.$desaturated-dark-cyan;
-		font-weight: var.$fw-700;
-		padding-block: 0.3rem 0.2rem;
-		padding-inline: 0.5rem;
+		div {
+			background-color: var.$desaturated-dark-cyan;
+			padding-block: 0.3rem 0.2rem;
+			padding-inline: 0.4rem;
+
+			&:hover {
+				background-color: black;
+			}
+		}
 	}
 }

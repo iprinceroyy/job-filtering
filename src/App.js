@@ -12,7 +12,7 @@ function App() {
 		<div className='App'>
 			<div className='App__Header'></div>
 			<div className='App__Main'>
-				{+tags.length && <SearchTags tags={tags}></SearchTags>}
+				{tags.length !== 0 && <SearchTags tagsList={tags}></SearchTags>}
 				<JobList></JobList>
 			</div>
 		</div>

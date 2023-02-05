@@ -6,10 +6,9 @@ const Tags = ({ role, level, languages, tools }) => {
 	const { tags, setUpdateTags } = useContext(TagsContext);
 
 	const handleClick = e => {
-		setUpdateTags(prevState => {
-			console.log(tags);
-			return [...prevState, e.target.innerText];
-		});
+		setUpdateTags(prevState =>
+			prevState.includes(e.target.innerText) ? [...prevState] : [...prevState, e.target.innerText]
+		);
 	};
 
 	return (
