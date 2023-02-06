@@ -4,6 +4,9 @@ import Tags from './TagsComponent';
 
 import logo from '../assets/images/insure.svg';
 
+import { TagsContext } from '../contexts/tagsContext';
+import { useContext } from 'react';
+
 // "company": "Insure",
 // 		"logo": "./images/insure.svg",
 // 		"new": false,
@@ -33,6 +36,9 @@ const Job = ({ companyData }) => {
 		tools,
 	} = companyData;
 
+	const mentionedTags = [role, level, ...languages, ...tools];
+	const { tags } = useContext(TagsContext);
+
 	return (
 		<div className='Job'>
 			<div>
@@ -43,7 +49,7 @@ const Job = ({ companyData }) => {
 				<p className='Position'>{position}</p>
 				<Criteria postedAt={postedAt} contract={contract} location={location}></Criteria>
 			</div>
-			<Tags role={role} level={level} languages={languages} tools={tools}></Tags>
+			<Tags mentionedTags={mentionedTags}></Tags>
 		</div>
 	);
 };

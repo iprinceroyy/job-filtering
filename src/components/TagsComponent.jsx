@@ -2,7 +2,7 @@ import { useState, useContext } from 'react';
 
 import { TagsContext } from '../contexts/tagsContext';
 
-const Tags = ({ role, level, languages, tools }) => {
+const Tags = ({ mentionedTags }) => {
 	const { tags, setUpdateTags } = useContext(TagsContext);
 
 	const handleClick = e => {
@@ -13,16 +13,9 @@ const Tags = ({ role, level, languages, tools }) => {
 
 	return (
 		<div className='Tags'>
-			<p onClick={handleClick}>{role}</p>
-			<p onClick={handleClick}>{level}</p>
-			{languages.map((language, i) => (
+			{mentionedTags.map((tag, i) => (
 				<p key={`${i}`} onClick={handleClick}>
-					{language}
-				</p>
-			))}
-			{tools.map((tool, i) => (
-				<p key={`${i}`} onClick={handleClick}>
-					{tool}
+					{tag}
 				</p>
 			))}
 		</div>
