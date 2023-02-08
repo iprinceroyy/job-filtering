@@ -9,36 +9,20 @@ const JobList = () => {
 	const { companies } = useContext(CompaniesContext);
 	const { tags } = useContext(TagsContext);
 	console.log(tags);
-	companies.map(company => console.log(Object.values(company).flat()));
-	//const filterCompanies = companies.filter(company => company.includes(tags));
+	const res = companies.filter(
+		({ role, level, tools, languages }) =>
+			tags.includes(role) &&
+			tags.includes(level) &&
+			tools.some(tool => tags.includes(tool) && languages.some(language => tags.includes(language)))
+	);
 
-	// "company": "Insure",
-	// 		"logo": "./images/insure.svg",
-	// 		"new": false,
-	// 		"featured": false,
-	// 		"position": "Junior Frontend Developer",
-	// 		"role": "Frontend",
-	// 		"level": "Junior",
-	// 		"postedAt": "2w ago",
-	// 		"contract": "Full Time",
-	// 		"location": "USA Only",
-	// 		"languages": ["JavaScript"],
-	// 		"tools": ["Vue", "Sass"]
+	console.log('res: ', res);
 
 	return (
 		<div className='Job__List'>
-			{companies.map(({ id, ...companyData }) => {
-				const {
-					company,
-					new: newAdded,
-					featured,
-					position,
-					postedAt,
-					contract,
-					location,
-				} = companyData;
-				return <Job key={id} companyData={companyData}></Job>;
-			})}
+			{(tags.length !== 0 &&
+				res.map(({ id, ...companyData }) => <Job key={id} companyData={companyData}></Job>)) ||
+				companies.map(({ id, ...companyData }) => <Job key={id} companyData={companyData}></Job>)}
 		</div>
 	);
 };
