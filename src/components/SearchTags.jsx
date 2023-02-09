@@ -3,7 +3,7 @@ import { useContext } from 'react';
 import { TagsContext } from '../contexts/tagsContext';
 
 const SearchTags = ({ tagsList }) => {
-	const { tags, setUpdateTags } = useContext(TagsContext);
+	const { setUpdateTags } = useContext(TagsContext);
 
 	const handleClear = () => {
 		setUpdateTags([]);

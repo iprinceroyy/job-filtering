@@ -1,9 +1,9 @@
-import { useState, useContext } from 'react';
+import { useContext } from 'react';
 
 import { TagsContext } from '../contexts/tagsContext';
 
 const Tags = ({ mentionedTags }) => {
-	const { tags, setUpdateTags } = useContext(TagsContext);
+	const { setUpdateTags } = useContext(TagsContext);
 
 	const handleClick = e => {
 		setUpdateTags(prevState =>

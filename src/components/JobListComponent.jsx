@@ -8,15 +8,15 @@ import { TagsContext } from '../contexts/tagsContext';
 const JobList = () => {
 	const { companies } = useContext(CompaniesContext);
 	const { tags } = useContext(TagsContext);
-	console.log(tags);
-	const res = companies.filter(
-		({ role, level, tools, languages }) =>
-			tags.includes(role) &&
-			tags.includes(level) &&
-			tools.some(tool => tags.includes(tool) && languages.some(language => tags.includes(language)))
-	);
 
-	console.log('res: ', res);
+	let res = [];
+	res = companies.filter(
+		({ role, level, tools, languages }) =>
+			tags.includes(role) ||
+			tags.includes(level) ||
+			tools.some(tool => tags.includes(tool)) ||
+			languages.some(language => tags.includes(language))
+	);
 
 	return (
 		<div className='Job__List'>
