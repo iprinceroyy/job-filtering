@@ -1,0 +1,13 @@
+@use '../../mixin' as m;
+@use '../../variables' as var;
+
+.Criteria {
+	@include m.display-flex($gap: 1rem, $align: center);
+	font-size: 0.8rem;
+	color: var.$dark-grayish-cyan;
+
+	& p:not(:first-child) {
+		border-left: 6.5px dotted;
+		padding-inline-start: 0.4rem;
+	}
+}

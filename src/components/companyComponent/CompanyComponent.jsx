@@ -1,3 +1,5 @@
+import './CompanyComponentStyles.scss';
+
 const Company = ({ companyName, newAdded, featured }) => {
 	return (
 		<div className='Company'>

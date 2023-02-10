@@ -5,6 +5,8 @@ import Job from '../jobComponent/JobComponent';
 import { CompaniesContext } from '../../contexts/companyContext';
 import { TagsContext } from '../../contexts/tagsContext';
 
+import './JobListComponentStyles.scss';
+
 const JobList = () => {
 	const { companies } = useContext(CompaniesContext);
 	const { tags } = useContext(TagsContext);

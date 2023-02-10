@@ -1,3 +1,5 @@
+import './CriteriaComponentStyles.scss';
+
 const Criteria = ({ postedAt, contract, location }) => {
 	return (
 		<div className='Criteria'>

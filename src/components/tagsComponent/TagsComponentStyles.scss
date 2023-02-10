@@ -1,0 +1,87 @@
+@use '../../mixin' as m;
+@use '../../variables' as var;
+
+.Tags {
+	@include m.display-flex($gap: 1rem, $align: center, $wrap: wrap);
+	margin-block-start: 1rem;
+
+	@media (min-width: 45rem) {
+		justify-self: flex-end;
+		margin: 0;
+	}
+
+	& p {
+		display: flex;
+		align-items: center;
+		color: var.$desaturated-dark-cyan;
+		font-weight: var.$fw-700;
+		padding-block: 0.3rem 0.2rem;
+		padding-inline: 0.5rem;
+		border-radius: 3px;
+		background-color: var.$light-grayish-cyan;
+
+		&:hover,
+		&:active {
+			background-color: var.$desaturated-dark-cyan;
+			color: white;
+			cursor: pointer;
+		}
+	}
+}
+
+.Search__Tags {
+	background-color: white;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 80%;
+	justify-self: center;
+	margin-block-start: -1.5rem;
+	padding-inline: 1rem;
+	padding-block: 0.9rem;
+	border-radius: 5px;
+	box-shadow: 0 1rem 1rem -1.35rem var.$desaturated-dark-cyan;
+
+	img {
+		width: 0.8rem;
+	}
+
+	.Search--List {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 2rem;
+
+		& + div p {
+			color: var.$desaturated-dark-cyan;
+
+			&:hover {
+				border-bottom: 2px solid var.$desaturated-dark-cyan;
+			}
+		}
+	}
+
+	.List--Tags {
+		display: grid;
+		grid-template-columns: 1fr auto;
+		align-items: center;
+		align-content: center;
+		background-color: var.$light-grayish-cyan;
+
+		p {
+			color: var.$desaturated-dark-cyan;
+			font-weight: var.$fw-700;
+			padding-block: 0.3rem 0.2rem;
+			padding-inline: 0.5rem;
+		}
+
+		div {
+			background-color: var.$desaturated-dark-cyan;
+			padding-block: 0.3rem 0.2rem;
+			padding-inline: 0.4rem;
+
+			&:hover {
+				background-color: black;
+			}
+		}
+	}
+}

@@ -1,0 +1,27 @@
+@use '../../mixin' as m;
+@use '../../variables' as var;
+
+.Company {
+	@include m.display-flex($gap: 1.5rem, $align: center);
+	font-weight: var.$fw-700;
+
+	.Company__Name {
+		color: var.$desaturated-dark-cyan;
+	}
+
+	&--new,
+	&--featured {
+		background-color: var.$desaturated-dark-cyan;
+		color: white;
+		font-size: 0.7rem;
+		text-transform: uppercase;
+		padding-block: 0.3rem 0.2rem;
+		padding-inline: 0.5rem;
+		border-radius: 40px;
+		margin-inline-end: -1rem;
+	}
+
+	.Company--featured {
+		background-color: var.$black;
+	}
+}

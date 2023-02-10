@@ -1,0 +1,11 @@
+@use '../../mixin' as m;
+@use '../../variables' as var;
+
+.Job__List {
+	@include m.display-grid(0, $align: center, $justify: center);
+	margin-block-end: 3rem;
+
+	// Adjustment to animation
+	margin-block-start: 1rem;
+	overflow: hidden;
+}

@@ -4,6 +4,8 @@ import Tags from '../tagsComponent/TagsComponent';
 
 import logo from '../../assets/images/insure.svg';
 
+import './JobComponentStyles.scss';
+
 const Job = ({ companyData }) => {
 	const {
 		company,
