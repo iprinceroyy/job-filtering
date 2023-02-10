@@ -1,9 +1,9 @@
 import { useContext } from 'react';
 import './App.scss';
-import JobList from './components/JobListComponent';
+import JobList from './components/jobListComponent/JobListComponent';
 
 import { TagsContext } from './contexts/tagsContext';
-import SearchTags from './components/SearchTags';
+import SearchTags from './components/tagsComponent/SearchTags';
 
 function App() {
 	const { tags } = useContext(TagsContext);

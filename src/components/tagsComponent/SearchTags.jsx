@@ -1,6 +1,6 @@
-import crossIcon from '../assets/images/icon-remove.svg';
+import crossIcon from '../../assets/images/icon-remove.svg';
 import { useContext } from 'react';
-import { TagsContext } from '../contexts/tagsContext';
+import { TagsContext } from '../../contexts/tagsContext';
 
 const SearchTags = ({ tagsList }) => {
 	const { setUpdateTags } = useContext(TagsContext);

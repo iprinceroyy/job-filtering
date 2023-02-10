@@ -1,8 +1,8 @@
-import Company from './CompanyComponent';
-import Criteria from './CriteriaComponent';
-import Tags from './TagsComponent';
+import Company from '../companyComponent/CompanyComponent';
+import Criteria from '../criteriaComponent/CriteriaComponent';
+import Tags from '../tagsComponent/TagsComponent';
 
-import logo from '../assets/images/insure.svg';
+import logo from '../../assets/images/insure.svg';
 
 const Job = ({ companyData }) => {
 	const {

@@ -1,9 +1,9 @@
 import { useContext } from 'react';
 
-import Job from './JobComponent';
+import Job from '../jobComponent/JobComponent';
 
-import { CompaniesContext } from '../contexts/companyContext';
-import { TagsContext } from '../contexts/tagsContext';
+import { CompaniesContext } from '../../contexts/companyContext';
+import { TagsContext } from '../../contexts/tagsContext';
 
 const JobList = () => {
 	const { companies } = useContext(CompaniesContext);

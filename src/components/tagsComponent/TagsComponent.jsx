@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 
-import { TagsContext } from '../contexts/tagsContext';
+import { TagsContext } from '../../contexts/tagsContext';
 
 const Tags = ({ mentionedTags }) => {
 	const { setUpdateTags } = useContext(TagsContext);
