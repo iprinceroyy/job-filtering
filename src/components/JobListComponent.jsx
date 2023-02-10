@@ -9,8 +9,8 @@ const JobList = () => {
 	const { companies } = useContext(CompaniesContext);
 	const { tags } = useContext(TagsContext);
 
-	let res = [];
-	res = companies.filter(
+	let filteredCompanies = [];
+	filteredCompanies = companies.filter(
 		({ role, level, tools, languages }) =>
 			tags.includes(role) ||
 			tags.includes(level) ||
@@ -21,7 +21,9 @@ const JobList = () => {
 	return (
 		<div className='Job__List'>
 			{(tags.length !== 0 &&
-				res.map(({ id, ...companyData }) => <Job key={id} companyData={companyData}></Job>)) ||
+				filteredCompanies.map(({ id, ...companyData }) => (
+					<Job key={id} companyData={companyData}></Job>
+				))) ||
 				companies.map(({ id, ...companyData }) => <Job key={id} companyData={companyData}></Job>)}
 		</div>
 	);

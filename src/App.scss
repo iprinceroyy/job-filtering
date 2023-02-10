@@ -24,8 +24,10 @@
 }
 
 .Job__List {
-	@include m.display-grid(3rem, $align: center, $justify: center);
-	margin-block: 3rem;
+	@include m.display-grid(0, $align: center, $justify: center);
+	margin-block-end: 3rem;
+	margin-block-start: 1rem;
+	overflow: hidden;
 }
 
 .Job {
@@ -150,8 +152,55 @@ hr {
 /*  Animations  */
 .Job {
 	transition: all 0.9s ease-in-out;
+	animation: fadeIn 2.5s ease-in-out;
+	animation-fill-mode: forwards;
+	margin-block-start: -5rem;
+	opacity: 0;
+
 	&:hover {
 		scale: 1.06;
+	}
+}
+
+@for $i from 1 through 10 {
+	.Job:nth-child(#{$i}) {
+		animation-delay: 0.25s * $i;
+	}
+}
+
+@-webkit-keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	25% {
+		opacity: 0.25;
+		margin-block-start: 1rem;
+	}
+	50% {
+		opacity: 0.5;
+		margin-block-start: 1.5rem;
+	}
+	100% {
+		opacity: 1;
+		margin-block-start: 2rem;
+	}
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	25% {
+		opacity: 0.25;
+		margin-block-start: 1rem;
+	}
+	50% {
+		opacity: 0.5;
+		margin-block-start: 1.5rem;
+	}
+	100% {
+		opacity: 1;
+		margin-block-start: 2rem;
 	}
 }
 

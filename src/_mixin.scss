@@ -22,7 +22,7 @@
 	display: grid;
 
 	@if $gap != 0 {
-		gap: 3rem;
+		gap: $gap;
 	}
 
 	@if $align != '' and $justify != '' {
