@@ -2,12 +2,17 @@
 @use '../../variables' as var;
 
 .Criteria {
-	@include m.display-flex($gap: 1rem, $align: center);
+	@include m.display-flex($gap: 0);
 	font-size: 0.8rem;
 	color: var.$dark-grayish-cyan;
+	padding: 0;
+}
 
-	& p:not(:first-child) {
-		border-left: 6.5px dotted;
-		padding-inline-start: 0.4rem;
-	}
+.dot {
+	display: inline-block;
+	width: 0.2rem;
+	height: 0.2rem;
+	background-color: currentColor;
+	border-radius: 50%;
+	margin-inline: 1rem;
 }

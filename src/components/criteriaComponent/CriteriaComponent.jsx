@@ -4,8 +4,14 @@ const Criteria = ({ postedAt, contract, location }) => {
 	return (
 		<div className='Criteria'>
 			<p>{postedAt}</p>
-			<p>{contract}</p>
-			<p>{location}</p>
+			<p>
+				<span className='dot'></span>
+				{contract}
+			</p>
+			<p>
+				<span className='dot'></span>
+				{location}
+			</p>
 		</div>
 	);
 };

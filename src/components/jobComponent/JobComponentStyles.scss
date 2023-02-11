@@ -24,9 +24,9 @@
 	}
 
 	@media (min-width: 45rem) {
-		grid-template-columns: 1fr 4.5fr 7.5fr;
+		grid-template-columns: 1fr 5fr 7.5fr;
 		align-items: center;
-		gap: 2rem;
+		gap: 1.2rem;
 		padding: 1.4rem;
 		border-radius: 5px;
 		border-left: 5px solid var.$desaturated-dark-cyan;

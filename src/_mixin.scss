@@ -25,7 +25,11 @@
 		gap: $gap;
 	}
 
-	@if $align != '' and $justify != '' {
-		place-items: $align $justify;
+	@if $align != '' {
+		align-items: $align;
+	}
+
+	@if $justify != '' {
+		justify-items: $justify;
 	}
 }
