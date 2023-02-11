@@ -4,7 +4,7 @@
 .Job {
 	@include m.display-grid();
 	position: relative;
-	width: 82%;
+	width: max(325px, 80%);
 	font-size: var.$font-size;
 	border-left: 8px solid var.$desaturated-dark-cyan;
 	border-radius: 8px;
@@ -36,6 +36,8 @@
 
 	@media (min-width: 64rem) {
 		padding: 2rem;
+		margin-block-start: 2.5rem;
+		//width: calc(100% + -20.3rem);
 	}
 
 	&__Description {
