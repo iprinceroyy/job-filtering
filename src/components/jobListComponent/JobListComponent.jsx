@@ -11,18 +11,13 @@ const JobList = () => {
 	const { companies } = useContext(CompaniesContext);
 	const { tags } = useContext(TagsContext);
 
-	let filteredCompanies = [];
-	filteredCompanies = companies.filter(
-		({ role, level, tools, languages }) =>
-			tags.includes(role) ||
-			tags.includes(level) ||
-			tools.some(tool => tags.includes(tool)) ||
-			languages.some(language => tags.includes(language))
+	const filteredCompanies = companies.filter(company =>
+		tags.every(tag => Object.values(company).flat(1).includes(tag))
 	);
 
 	return (
 		<div className='Job__List'>
-			{(tags.length !== 0 &&
+			{(filteredCompanies.length !== 0 &&
 				filteredCompanies.map(({ id, ...companyData }) => (
 					<Job key={id} companyData={companyData}></Job>
 				))) ||
