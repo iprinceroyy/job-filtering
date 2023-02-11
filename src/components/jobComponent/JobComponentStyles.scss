@@ -50,6 +50,7 @@
 
 		& > p {
 			font-weight: var.$fw-700;
+			font-size: 0.92rem;
 			color: var.$very-dark-grayish-cyan;
 			@media (min-width: 64rem) {
 				font-size: 1.3rem;
