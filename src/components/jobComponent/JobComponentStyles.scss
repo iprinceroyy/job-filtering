@@ -4,13 +4,13 @@
 .Job {
 	@include m.display-grid();
 	position: relative;
-	width: 80%;
+	width: 82%;
 	font-size: var.$font-size;
 	border-left: 8px solid var.$desaturated-dark-cyan;
 	border-radius: 8px;
 	background-color: white;
 	box-shadow: 0 1rem 2rem -2rem var.$desaturated-dark-cyan;
-	padding: 2rem;
+	padding: 2rem 1.5rem;
 
 	/*  Animation  */
 	transition: all 0.9s ease-in-out;
@@ -25,12 +25,16 @@
 	}
 
 	@media (min-width: 45rem) {
-		grid-template-columns: 1fr 5fr 7.5fr;
+		grid-template-columns: 1fr minmax(auto, 6fr) 6.5fr;
 		align-items: center;
 		gap: 1.2rem;
 		padding: 1.4rem;
 		border-radius: 5px;
 		border-left: 5px solid var.$desaturated-dark-cyan;
+	}
+
+	@media (min-width: 64rem) {
+		padding: 2rem;
 	}
 
 	&__Description {
@@ -46,6 +50,7 @@
 
 		& > p {
 			font-weight: var.$fw-700;
+			color: var.$very-dark-grayish-cyan;
 			@media (min-width: 64rem) {
 				font-size: 1.3rem;
 			}
@@ -55,12 +60,12 @@
 	img {
 		position: absolute;
 		top: -1.5rem;
-		width: 3rem;
+		width: 3.1rem;
 
 		@media (min-width: 45rem) {
 			position: relative;
 			top: 0.1rem;
-			width: 4.5rem;
+			width: 5rem;
 		}
 	}
 }

@@ -6,6 +6,9 @@
 	font-size: 0.8rem;
 	color: var.$dark-grayish-cyan;
 	padding: 0;
+	@media (min-width: 64rem) {
+		font-size: var.$font-size;
+	}
 }
 
 .dot {
