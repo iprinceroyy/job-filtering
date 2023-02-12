@@ -10,7 +10,9 @@ function App() {
 
 	return (
 		<div className='App'>
-			<div className='App__Header'></div>
+			<div className='App__Header'>
+				<h1>Job Filtering App</h1>
+			</div>
 			<div className='App__Main'>
 				{tags.length !== 0 && <SearchTags tagsList={tags}></SearchTags>}
 				<JobList></JobList>
