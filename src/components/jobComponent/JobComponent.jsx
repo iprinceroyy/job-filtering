@@ -26,7 +26,7 @@ const Job = ({ companyData }) => {
 	const mentionedTags = [role, level, ...languages, ...tools];
 
 	return (
-		<div className='Job'>
+		<div className={`Job ${featured && 'highlight'}`}>
 			<div>
 				<img src={icons[formatName(company)]} alt=''></img>
 			</div>

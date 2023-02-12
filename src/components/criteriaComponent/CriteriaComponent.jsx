@@ -6,11 +6,11 @@ const Criteria = ({ postedAt, contract, location }) => {
 			<p>{postedAt}</p>
 			<p>
 				<span className='dot'></span>
-				{contract}
+				<span>{contract}</span>
 			</p>
 			<p>
 				<span className='dot'></span>
-				{location}
+				<span>{location}</span>
 			</p>
 		</div>
 	);

@@ -1,13 +1,16 @@
 @use '../../mixin' as m;
 @use '../../variables' as var;
 
+.highlight {
+	border-left: 6px solid var.$desaturated-dark-cyan;
+}
+
 .Job {
 	@include m.display-grid();
 	position: relative;
-	width: max(325px, 80%);
+	width: max(330px, 80%);
 	font-size: var.$font-size;
-	border-left: 8px solid var.$desaturated-dark-cyan;
-	border-radius: 8px;
+	border-radius: 6px;
 	background-color: white;
 	box-shadow: 0 1rem 2rem -2rem var.$desaturated-dark-cyan;
 	padding: 2rem 1.5rem;

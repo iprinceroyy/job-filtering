@@ -2,14 +2,15 @@
 @use '../../variables' as var;
 
 .Company {
-	@include m.display-flex($gap: 1rem, $align: center);
+	@include m.display-flex($gap: 1.2rem, $align: center);
 	font-weight: var.$fw-700;
-	@media (min-width: 54rem) {
+	@media (min-width: 64rem) {
 		gap: 1.5rem;
 	}
 
 	.Company__Name {
 		color: var.$desaturated-dark-cyan;
+		font-size: 0.92rem;
 	}
 
 	&--new,
@@ -18,14 +19,14 @@
 		color: white;
 		font-size: 0.8rem;
 		text-transform: uppercase;
-		padding-block: 0.5rem 0.3rem;
-		padding-inline: 0.4rem;
+		padding-block: 0.46rem 0.3rem;
+		padding-inline: 0.5rem;
 		border-radius: 50px;
 		margin-inline-end: -1rem;
 	}
 
 	.Company--featured {
 		background-color: var.$very-dark-grayish-cyan;
-		margin-inline-start: 0.5rem;
+		margin-inline-start: 0.3rem;
 	}
 }
