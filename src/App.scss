@@ -2,9 +2,8 @@
 @use 'mixin' as m;
 
 .App {
-	@include m.display-flex($direction: column);
-
 	&__Header {
+		@include m.display-flex($direction: column, $align: center);
 		position: relative;
 		height: 11rem;
 		background-color: var.$desaturated-dark-cyan;
