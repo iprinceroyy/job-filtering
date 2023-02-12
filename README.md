@@ -32,7 +32,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Solution URL here](https://github.com/iprinceroyy/job-filtering)
+- Solution URL: [Solution URL here](https://www.frontendmentor.io/solutions/responsive-job-filtering-app-J_baVYhqKa)
 - Live Site URL: [Live site URL here](https://job-filtering-webapp.netlify.app/)
 
 ## My process
@@ -52,7 +52,7 @@ I've applied the learnings of React to sharpen my skills by solving the real-wor
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+Looking forward to gaining more hands-on experience in ReactJS library by building more projects.
 
 ### Useful resources
 
