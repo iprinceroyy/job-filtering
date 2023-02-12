@@ -9,7 +9,7 @@ function App() {
 	const { tags } = useContext(TagsContext);
 
 	return (
-		<div className='App'>
+		<main className='App'>
 			<div className='App__Header'>
 				<h1>Job Filtering App</h1>
 				{tags.length !== 0 && <SearchTags tagsList={tags}></SearchTags>}
@@ -17,7 +17,7 @@ function App() {
 			<div className='App__Main'>
 				<JobList></JobList>
 			</div>
-		</div>
+		</main>
 	);
 }
 
