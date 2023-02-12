@@ -13,7 +13,7 @@
 		font-size: 0.92rem;
 
 		@media (min-width: 80rem) {
-			font-size: 1.29rem;
+			font-size: var.$font-size;
 		}
 	}
 
@@ -27,11 +27,6 @@
 		padding-inline: 0.5rem;
 		border-radius: 50px;
 		margin-inline-end: -1rem;
-
-		@media (min-width: 80rem) {
-			font-size: var.$font-size;
-			padding-block: 0.55rem 0.35rem;
-		}
 	}
 
 	.Company--featured {

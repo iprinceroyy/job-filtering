@@ -8,7 +8,8 @@
 .Job {
 	@include m.display-grid();
 	position: relative;
-	width: max(330px, 80%);
+	width: 84%;
+	//width: max(330px, 80%);
 	font-size: var.$font-size;
 	border-radius: 6px;
 	background-color: white;
@@ -40,6 +41,7 @@
 
 	@media (min-width: 64rem) {
 		padding: 2rem;
+		width: 80%;
 	}
 
 	&__Description {
@@ -49,7 +51,7 @@
 
 		@media (min-width: 45rem) {
 			border: none;
-			gap: 0.75rem;
+			gap: 0.7rem;
 			padding: 0;
 		}
 
@@ -57,8 +59,8 @@
 			font-weight: var.$fw-700;
 			font-size: 0.92rem;
 			color: var.$very-dark-grayish-cyan;
-			@media (min-width: 64rem) {
-				font-size: 1.6rem;
+			@media (min-width: 80rem) {
+				font-size: 1.38rem;
 			}
 		}
 	}
