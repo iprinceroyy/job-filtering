@@ -1,4 +1,4 @@
-@mixin display-flex($direction: row, $gap: 0, $align: '', $wrap: nowrap) {
+@mixin display-flex($direction: row, $gap: 0, $align: '', $justify-content: '', $wrap: nowrap) {
 	display: flex;
 
 	@if $wrap != nowrap {
@@ -15,6 +15,10 @@
 
 	@if $align != '' {
 		align-items: center;
+	}
+
+	@if $justify-content != '' {
+		justify-content: $justify-content;
 	}
 }
 

@@ -29,7 +29,7 @@
 	}
 
 	@media (min-width: 45rem) {
-		grid-template-columns: 1fr minmax(auto, 6fr) 6.5fr;
+		grid-template-columns: auto auto 7.5fr;
 		align-items: center;
 		gap: 1.5rem;
 		padding: 1.4rem;
@@ -39,9 +39,10 @@
 		border-left: 5px solid var.$desaturated-dark-cyan;
 	}
 
-	@media (min-width: 64rem) {
-		padding: 2rem;
-		width: 80%;
+	@media (min-width: 80rem) {
+		padding-block: 1.9rem;
+		padding-inline: 2.1rem;
+		width: 79%;
 	}
 
 	&__Description {
@@ -59,6 +60,12 @@
 			font-weight: var.$fw-700;
 			font-size: 0.92rem;
 			color: var.$very-dark-grayish-cyan;
+
+			&:hover {
+				color: var.$desaturated-dark-cyan;
+				cursor: pointer;
+			}
+
 			@media (min-width: 80rem) {
 				font-size: 1.38rem;
 			}

@@ -5,6 +5,7 @@
 	@include m.display-flex($direction: column);
 
 	&__Header {
+		position: relative;
 		height: 11rem;
 		background-color: var.$desaturated-dark-cyan;
 		background-image: url('./assets/images/bg-header-mobile.svg');

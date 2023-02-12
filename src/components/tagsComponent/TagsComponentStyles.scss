@@ -28,17 +28,20 @@
 }
 
 .Search__Tags {
+	@include m.display-flex($justify-content: space-between, $align: center);
 	background-color: white;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	width: 82%;
-	justify-self: center;
-	margin-block-start: -1.5rem;
-	padding-inline: 1rem;
-	padding-block: 0.9rem;
+	position: absolute;
+	left: 8%;
+	bottom: -1.5rem;
+	width: 84%;
+	padding-inline: 1.5rem;
+	padding-block: 1rem;
 	border-radius: 5px;
 	box-shadow: 0 1rem 1rem -1.35rem var.$desaturated-dark-cyan;
+
+	@media (min-width: 80rem) {
+		width: 79%;
+	}
 
 	img {
 		width: 0.8rem;
@@ -61,21 +64,22 @@
 	.List--Tags {
 		display: grid;
 		grid-template-columns: 1fr auto;
-		align-items: center;
-		align-content: center;
 		background-color: var.$light-grayish-cyan;
+		border-radius: 4px;
+		overflow: hidden;
 
 		p {
 			color: var.$desaturated-dark-cyan;
 			font-weight: var.$fw-700;
-			padding-block: 0.3rem 0.2rem;
+			padding-block: 0.45rem 0.3rem;
 			padding-inline: 0.5rem;
 		}
 
 		div {
+			height: 100%;
 			background-color: var.$desaturated-dark-cyan;
-			padding-block: 0.3rem 0.2rem;
-			padding-inline: 0.4rem;
+			padding-block: 0.45rem 0.3rem;
+			padding-inline: 0.5rem;
 
 			&:hover {
 				background-color: black;
