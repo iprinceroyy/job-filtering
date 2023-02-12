@@ -9,7 +9,6 @@
 	@include m.display-grid();
 	position: relative;
 	width: 84%;
-	//width: max(330px, 80%);
 	font-size: var.$font-size;
 	border-radius: 6px;
 	background-color: white;
@@ -18,11 +17,12 @@
 
 	/*  Animation  */
 	transition: all 0.9s ease-in-out;
-	//animation: fadeIn 2.5s ease-in-out;
+	animation-name: fadeIn;
+	animation-timing-function: ease;
+	animation-duration: 4s;
 	animation-fill-mode: forwards;
-	margin-block-start: 2.5rem;
-	//margin-block-start: 2.5rem;
-	//opacity: 0;
+	margin-block-start: -15rem;
+	opacity: 0;
 
 	&:hover {
 		scale: 1.06;
@@ -32,9 +32,10 @@
 		grid-template-columns: auto auto 7.5fr;
 		align-items: center;
 		gap: 1.5rem;
+		margin-block-start: -7rem;
+		animation-duration: 2.5s;
+		animation-timing-function: ease-in-out;
 		padding: 1.4rem;
-		//margin-block-start: -7rem;
-		margin-block-start: 1.6rem;
 		border-radius: 5px;
 		border-left: 5px solid var.$desaturated-dark-cyan;
 	}
@@ -87,7 +88,11 @@
 
 @for $i from 1 through 10 {
 	.Job:nth-child(#{$i}) {
-		animation-delay: 0.25s * $i;
+		animation-delay: 0.4s * $i;
+
+		@media (min-width: 45rem) {
+			animation-delay: 0.25s * $i;
+		}
 	}
 }
 
@@ -97,15 +102,15 @@
 	}
 	25% {
 		opacity: 0.25;
-		margin-block-start: 1rem;
+		margin-block-start: 0.5rem;
 	}
 	50% {
 		opacity: 0.5;
-		margin-block-start: 1.5rem;
+		margin-block-start: 1.1rem;
 	}
 	100% {
 		opacity: 1;
-		margin-block-start: 2.5rem;
+		margin-block-start: 1.6rem;
 	}
 }
 
@@ -115,14 +120,14 @@
 	}
 	25% {
 		opacity: 0.25;
-		margin-block-start: 1rem;
+		margin-block-start: 0.5rem;
 	}
 	50% {
 		opacity: 0.5;
-		margin-block-start: 1.5rem;
+		margin-block-start: 1.1rem;
 	}
 	100% {
 		opacity: 1;
-		margin-block-start: 2rem;
+		margin-block-start: 1.6rem;
 	}
 }

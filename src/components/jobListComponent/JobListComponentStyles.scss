@@ -2,10 +2,14 @@
 @use '../../variables' as var;
 
 .Job__List {
-	@include m.display-grid(0, $align: center, $justify: center);
+	@include m.display-grid($gap: 1rem, $align: center, $justify: center);
 	padding-block-end: 3.6rem;
 
 	// Adjustment to animation
 	margin-block-start: 2.6rem;
 	overflow: hidden;
+
+	@media (min-width: 45rem) {
+		gap: 0;
+	}
 }
