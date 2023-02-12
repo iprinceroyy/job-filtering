@@ -5,8 +5,9 @@
 	@include m.display-flex($gap: 0);
 	font-size: 0.9rem;
 	color: var.$dark-grayish-cyan;
-	@media (min-width: 64rem) {
-		font-size: var.$font-size;
+
+	@media (min-width: 80rem) {
+		font-size: 1.25rem;
 	}
 }
 
@@ -18,4 +19,8 @@
 	border-radius: 50%;
 	margin-inline: 0.6rem;
 	margin-block-end: 0.12rem;
+
+	@media (min-width: 80rem) {
+		margin-inline: 1.4rem;
+	}
 }
