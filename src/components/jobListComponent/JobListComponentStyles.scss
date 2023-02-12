@@ -3,7 +3,7 @@
 
 .Job__List {
 	@include m.display-grid(0, $align: center, $justify: center);
-	margin-block-end: 4.6rem;
+	margin-block-end: 6.6rem;
 
 	// Adjustment to animation
 	margin-block-start: 2.5rem;
