@@ -45,6 +45,7 @@ Users should be able to:
 - CSS Grid
 - Mobile-first workflow
 - [React](https://reactjs.org/) - JS library
+- [Sass](https://sass-lang.com/guide)
 
 ### What I learned
 
