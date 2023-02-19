@@ -4,6 +4,7 @@
 .Criteria {
 	@include m.display-flex($gap: 0);
 	font-size: 0.9rem;
+	font-weight: var.$fw-500;
 	color: var.$dark-grayish-cyan;
 
 	@media (min-width: 80rem) {

@@ -10,11 +10,11 @@ import { TagsProvider } from './contexts/tagsContext';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 	<React.StrictMode>
-		<CompaniesProvider>
-			<TagsProvider>
+		<TagsProvider>
+			<CompaniesProvider>
 				<App />
-			</TagsProvider>
-		</CompaniesProvider>
+			</CompaniesProvider>
+		</TagsProvider>
 	</React.StrictMode>
 );
 

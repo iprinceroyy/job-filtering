@@ -3,7 +3,8 @@
 
 .Company {
 	@include m.display-flex($gap: 1.2rem, $align: center);
-	font-weight: var.$fw-700;
+	//font-weight: var.$fw-700;
+
 	@media (min-width: 64rem) {
 		gap: 1.5rem;
 	}
